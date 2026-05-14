@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clean Outreach Data | Verified Emails, Instagram & LinkedIn Leads</title>
+  <meta name="description" content="Get clean, targeted outreach data for higher open rates: verified emails, Instagram follower extraction, LinkedIn lead generation, and CSV enrichment." />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .page {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top right, rgba(6, 182, 212, 0.22), transparent 35%),
+        radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.16), transparent 32%),
+        linear-gradient(135deg, #0f172a 0%, #134e4a 100%);
+      overflow: hidden;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 22px;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: #06b6d4;
+    }
+
+    .nav-cta {
+      background: #10b981;
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+      white-space: nowrap;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 42px;
+      align-items: center;
+      padding: 70px 0 90px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #d1fae5;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(40px, 6.6vw, 74px);
+      line-height: 0.96;
+      letter-spacing: -2.4px;
+      margin-bottom: 24px;
+    }
+
+    h1 span {
+      color: #06b6d4;
+      display: block;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #e0f2fe;
+      max-width: 650px;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 26px;
+      border-radius: 14px;
+      font-weight: 800;
+      transition: 0.2s ease;
+    }
+
+    .primary-btn {
+      background: #10b981;
+      box-shadow: 0 16px 35px rgba(16, 185, 129, 0.35);
+    }
+
+    .secondary-btn {
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .primary-btn:hover,
+    .secondary-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .trust-row {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      color: #cbd5e1;
+      font-size: 15px;
+    }
+
+    .visual-card {
+      background: rgba(15, 23, 42, 0.74);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+      position: relative;
+    }
+
+    .floating-icons {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .icon-box {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+      padding: 18px 10px;
+      text-align: center;
+      font-weight: 800;
+      color: #e0f2fe;
+    }
+
+    .icon-box strong {
+      display: block;
+      font-size: 28px;
+      margin-bottom: 5px;
+    }
+
+    .table-wrap {
+      background: #f8fafc;
+      color: #0f172a;
+      border-radius: 18px;
+      overflow: hidden;
+      transform: rotate(-1.5deg);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    th {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 14px 12px;
+      text-align: left;
+    }
+
+    td {
+      padding: 12px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    td.email {
+      color: #059669;
+      font-weight: 700;
+    }
+
+    section {
+      padding: 82px 0;
+      background: #ffffff;
+      color: #0f172a;
+    }
+
+    section.dark {
+      background: #0f172a;
+      color: #ffffff;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 46px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.05;
+      margin-bottom: 16px;
+      letter-spacing: -1.4px;
+    }
+
+    .section-heading p {
+      color: #475569;
+      font-size: 18px;
+    }
+
+    .dark .section-heading p {
+      color: #cbd5e1;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 22px;
+      padding: 28px;
+    }
+
+    .dark .card {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: #d1fae5;
+      color: #047857;
+      font-size: 24px;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #475569;
+    }
+
+    .dark .card p {
+      color: #cbd5e1;
+    }
+
+    .deliverables {
+      list-style: none;
+      margin-top: 16px;
+    }
+
+    .deliverables li {
+      margin: 9px 0;
+      color: #334155;
+    }
+
+    .dark .deliverables li {
+      color: #dbeafe;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .step {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 22px;
+      padding: 24px;
+    }
+
+    .step-number {
+      color: #06b6d4;
+      font-weight: 900;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .email-box {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 26px;
+      padding: 30px;
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .email-preview {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+    }
+
+    .email-top {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 14px 16px;
+      font-weight: 800;
+    }
+
+    .email-body {
+      padding: 18px;
+      color: #334155;
+      font-size: 15px;
+    }
+
+    .email-body strong {
+      color: #0f172a;
+    }
+
+    .pricing-card {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 28px;
+      padding: 36px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .pricing-card h3 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .pricing-card ul {
+      list-style: none;
+      margin-top: 18px;
+    }
+
+    .pricing-card li {
+      margin: 10px 0;
+      color: #334155;
+    }
+
+    .price {
+      font-size: 44px;
+      font-weight: 900;
+      color: #10b981;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .final-cta {
+      text-align: center;
+      padding: 86px 0;
+      background:
+        radial-gradient(circle at top, rgba(16, 185, 129, 0.22), transparent 35%),
+        linear-gradient(135deg, #0f172a, #134e4a);
+    }
+
+    .final-cta h2 {
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+
+    .final-cta p {
+      max-width: 680px;
+      margin: 0 auto 30px;
+      color: #e0f2fe;
+      font-size: 19px;
+    }
+
+    footer {
+      background: #020617;
+      color: #94a3b8;
+      text-align: center;
+      padding: 24px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .pricing-card,
+      .email-box {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-3,
+      .grid-2,
+      .steps {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .price {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 640px) {
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-cta {
+        padding: 10px 14px;
+        font-size: 14px;
+      }
+
+      .hero {
+        padding: 42px 0 64px;
+      }
+
+      .grid-3,
+      .grid-2,
+      .steps,
+      .floating-icons {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .primary-btn,
+      .secondary-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="container">
+      <div class="logo">Clean<span>Leads</span> Pro</div>
+      <a class="nav-cta" href="#order">Get Outreach Data</a>
+    </header>
+
+    <main class="container hero">
+      <div>
+        <div class="badge">✅ Clean Data · Verified Emails · Better Outreach Results</div>
+        <h1>Emails That Feel <span>Personal, Not Spammy</span></h1>
+        <p>I help you build targeted prospect lists with verified emails, enriched CSV files, Instagram follower data, and bulk LinkedIn leads so your outreach is more relevant, professional, and easier to personalize.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#order">Get My Lead List</a>
+          <a class="secondary-btn" href="#services">View Services</a>
+        </div>
+        <div class="trust-row">
+          <span>📧 Verified Emails</span>
+          <span>🎯 Targeted Leads</span>
+          <span>📊 Clean CSV Delivery</span>
+          <span>💬 Quick Response</span>
+        </div>
+      </div>
+
+      <div class="visual-card">
+        <div class="floating-icons">
+          <div class="icon-box"><strong>CSV</strong>Enrich</div>
+          <div class="icon-box"><strong>✉️</strong>Verify</div>
+          <div class="icon-box"><strong>🔗</strong>LinkedIn</div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Source</th>
+                <th>Email</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John Smith</td>
+                <td>LinkedIn</td>
+                <td class="email">john@company.com</td>
+                <td>Verified</td>
+              </tr>
+              <tr>
+                <td>Sarah Lee</td>
+                <td>Instagram</td>
+                <td class="email">sarah@brand.com</td>
+                <td>Verified</td>
+              </tr>
+              <tr>
+                <td>Mike Brown</td>
+                <td>CSV</td>
+                <td class="email">mike@company.com</td>
+                <td>Enriched</td>
+              </tr>
+              <tr>
+                <td>Emily Davis</td>
+                <td>LinkedIn</td>
+                <td class="email">emily@agency.com</td>
+                <td>Ready</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Targeted Lead Data for Higher Open Rates</h2>
+        <p>Good outreach starts before you send the email. I help you collect accurate, relevant, and organized data so every message can be more personalized and less spammy.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon">📧</div>
+          <h3>Verified Email Finding</h3>
+          <p>I find business emails and verify them using trusted email verification tools to help reduce bounce risk and improve list quality.</p>
+          <ul class="deliverables">
+            <li>✅ Business email finding</li>
+            <li>✅ Verification status column</li>
+            <li>✅ Duplicate removal</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-icon">📊</div>
+          <h3>Bulk CSV Data Enrichment</h3>
+          <p>Turn incomplete spreadsheets into clean outreach-ready files with missing fields added and organized properly.</p>
+          <ul class="deliverables">
+            <li>✅ Company details</li>
+            <li>✅ Job titles and LinkedIn URLs</li>
+            <li>✅ Clean Excel / CSV delivery</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎯</div>
+          <h3>Custom List Building</h3>
+          <p>I build targeted prospect lists based on your ideal customer profile, niche, location, industry, and job title.</p>
+          <ul class="deliverables">
+            <li>✅ B2B and B2C leads</li>
+            <li>✅ Niche-specific research</li>
+            <li>✅ Ready-to-use outreach file</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark">
+    <div class="container">
+      <div class="section-heading">
+        <h2>More Lead Sources for Better Targeting</h2>
+        <p>Choose the data source that matches your campaign: Instagram audiences, LinkedIn decision-makers, or your existing CSV file.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-icon">📸</div>
+          <h3>Instagram Follower Extraction</h3>
+          <p>I extract useful public profile data from Instagram followers or following lists and organize it into a clean spreadsheet for audience research, influencer research, or outreach preparation.</p>
+          <ul class="deliverables">
+            <li>✅ Profile names and usernames</li>
+            <li>✅ Bio / category details when available</li>
+            <li>✅ Emails or phone numbers when publicly available</li>
+            <li>✅ Clean CSV / Excel formatting</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-icon">💼</div>
+          <h3>Bulk LinkedIn Lead Generation</h3>
+          <p>I collect targeted LinkedIn leads by job title, industry, company, location, and niche, then enrich the list with available contact and company details.</p>
+          <ul class="deliverables">
+            <li>✅ Decision-maker leads</li>
+            <li>✅ LinkedIn profile URLs</li>
+            <li>✅ Company name, website, and title</li>
+            <li>✅ Verified emails where available</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-heading">
+        <h2>Built for Clean, Professional Email Outreach</h2>
+        <p>I do not help with spam. I help you prepare better data so your outreach can be more relevant, personalized, and useful to the right people.</p>
+      </div>
+
+      <div class="email-box">
+        <div>
+          <h3>Why Clean Data Improves Open Rate</h3>
+          <p>When your list is targeted and organized, you can write better subject lines, personalize the first line, segment by industry or role, and avoid sending irrelevant messages.</p>
+          <ul class="deliverables">
+            <li>✅ Better targeting by niche and role</li>
+            <li>✅ Lower bounce risk with verified emails</li>
+            <li>✅ Easier personalization using enriched fields</li>
+            <li>✅ Cleaner CRM or email tool upload</li>
+          </ul>
+        </div>
+        <div class="email-preview">
+          <div class="email-top">Personalized Outreach Example</div>
+          <div class="email-body">
+            <p><strong>Subject:</strong> Quick question about {{Company}}</p><br />
+            <p>Hi {{First Name}},</p><br />
+            <p>I noticed {{Company}} works in {{Industry}} and wanted to reach out with a relevant idea.</p><br />
+            <p>Would it be worth sharing a quick sample of targeted leads for your market?</p><br />
+            <p>Best regards,<br />Your Name</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Simple Process, Clean Delivery</h2>
+        <p>You send the target. I research, enrich, verify, clean, and deliver a ready-to-use file.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">01</div>
+          <h3>Share Your Target</h3>
+          <p>Send your niche, location, platform, job titles, or existing CSV file.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">02</div>
+          <h3>Lead Research</h3>
+          <p>I collect targeted data from relevant public sources and organize it clearly.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">03</div>
+          <h3>Email Verification</h3>
+          <p>Emails are checked and marked with verification status where possible.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">04</div>
+          <h3>CSV Delivery</h3>
+          <p>You receive a clean Excel or CSV file ready for outreach and CRM upload.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="order">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Ready to Build a Better Outreach List?</h2>
+        <p>Best for agencies, sales teams, recruiters, marketers, founders, local businesses, and B2B outreach campaigns.</p>
+      </div>
+
+      <div class="pricing-card">
+        <div>
+          <h3>Custom Lead Data Package</h3>
+          <p>Perfect for verified email finding, CSV enrichment, Instagram follower extraction, bulk LinkedIn lead generation, and clean prospect list building.</p>
+          <ul>
+            <li>✅ Targeted prospect list building</li>
+            <li>✅ Verified emails and contact data</li>
+            <li>✅ Instagram follower / following extraction</li>
+            <li>✅ Bulk LinkedIn lead generation</li>
+            <li>✅ Clean Excel / CSV delivery</li>
+          </ul>
+        </div>
+        <div>
+          <div class="price">Custom</div>
+          <a class="primary-btn" href="https://www.fiverr.com/sayyamnrg" target="_blank" rel="noopener">Order on Fiverr</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="final-cta">
+    <div class="container">
+      <h2>Get Clean Data Before Sending Emails</h2>
+      <p>Improve your outreach foundation with accurate, verified, and organized lead data built around your ideal audience.</p>
+      <a class="primary-btn" href="https://www.fiverr.com/sayyamnrg" target="_blank" rel="noopener">Get My Lead List Now</a>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 CleanLeads Pro · Verified Email Finding · Instagram Follower Extraction · Bulk LinkedIn Lead Generation · CSV Data Enrichment
+  </footer>
+</body>
+</html>
